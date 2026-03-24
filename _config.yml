@@ -1,34 +1,59 @@
-title: "Blog Title"
-author: "Blog Author"
-description: "My blog"
+title: "Arya Hariharan"
+author: "Arya Hariharan"
+description: "CS student at R.V. College of Engineering | ML & AI Safety Research"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
 date_format: "%B %d, %Y"
 
 # Layout
+show_excerpts: true
+show_frame: false
+show_sidebar: false
+show_minimal: false
 
-show_excerpts: true             # show article excerpts instead of archive list on the home page
-show_frame: true                # display a grey frame on large screens
-show_sidebar: false             # show a sidebar instead of the usual header
-show_minimal: false             # remove all clutter
+# Menu
+navigation:
+  - {file: "archive.html", title: "Home",   sidebaricon: home}
+  - {file: "about.md",     title: "About",  sidebaricon: address-card}
+  - {file: "papers.md",    title: "Papers", sidebaricon: book-open}
+  - {file: "resume.md",    title: "Resume", sidebaricon: file-alt}
 
-#show_frame: "/assets/images/background.svg"
-
-# Menu                          # for available icons see https://fontawesome.com/v5/icons/
-
-navigation:                     # accepts {file, title, url, icon, sidebaricon}
-  - {file: "archive.html", sidebaricon: home}
-  - {file: "README.md", sidebaricon: address-card}
-
-external:                       # accepts {file, title, url, icon, sidebaricon}
-  - {title: Mail, icon: envelope, url: "mailto:author@example.com"}
-  - {title: Github, icon: github, url: "https://github.com/niklasbuschmann/contrast"}
-  - {title: Subscribe, icon: rss, url: "/feed.xml"}
-
-comments:
-#  disqus_shortname: ""         # see https://disqus.com
-#  isso_domain: ""              # see https://isso-comments.de
+external:
+  - {title: Mail,     icon: envelope, url: "mailto:arya.hariharan2004@gmail.com"}
+  - {title: Github,   icon: github,   url: "https://github.com/Arya-Hari"}
+  - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/arya-hariharan-b0327a205"}
 
 plugins:
- - jekyll-feed
+  - jekyll-feed
+```
+
+---
+
+## Step 5: Add Your Pages
+
+Place these files in the **root** of your repo (we've already drafted all of these for you!):
+
+| File | What it is |
+|---|---|
+| `about.md` | Your bio & research interests |
+| `papers.md` | Publications & under-review work |
+| `resume.md` | Full CV with download link |
+
+And place your PDF at:
+```
+assets/resume.pdf
+```
+
+---
+
+## Step 6: Your Final Repo Structure
+```
+Arya-Hari.github.io/
+├── _config.yml        ← paste the config above
+├── about.md           ← download from our chat
+├── papers.md          ← download from our chat
+├── resume.md          ← download from our chat
+├── assets/
+│   └── resume.pdf     ← upload your CV here
+└── [theme files]      ← everything else from the contrast fork
